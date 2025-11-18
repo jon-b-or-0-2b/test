@@ -1,0 +1,1177 @@
+2025-11-17 13:38:19,114 - __main__ - INFO - Loaded 5 agent configurations from prompt1_schema.json
+2025-11-17 13:38:19,114 - __main__ - INFO - Starting document processing: solar.pdf
+2025-11-17 13:38:19,114 - __main__ - INFO - Method: Image extraction
+2025-11-17 13:38:19,114 - __main__ - INFO - Step 1: Loading document
+2025-11-17 13:38:19,131 - agent_toolkit - INFO - Loading document: solar.pdf, is_image=True
+2025-11-17 13:38:19,131 - agent_toolkit - INFO - Converting PDF to images: solar.pdf
+2025-11-17 13:38:19,173 - agent_toolkit - ERROR - Error converting PDF to images: Unable to get page count. Is poppler installed and in PATH?
+Traceback (most recent call last):
+  File "C:\Users\jonat\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\pdf2image\pdf2image.py", line 581, in pdfinfo_from_path
+    proc = Popen(command, env=env, stdout=PIPE, stderr=PIPE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 1538, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 102, in _pdf_to_images
+    images = convert_from_path(str(pdf_path))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\pdf2image\pdf2image.py", line 127, in convert_from_path
+    page_count = pdfinfo_from_path(
+                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\pdf2image\pdf2image.py", line 607, in pdfinfo_from_path
+    raise PDFInfoNotInstalledError(
+pdf2image.exceptions.PDFInfoNotInstalledError: Unable to get page count. Is poppler installed and in PATH?
+2025-11-17 13:38:19,175 - agent_toolkit - ERROR - Error in document_loader: Unable to get page count. Is poppler installed and in PATH?
+Traceback (most recent call last):
+  File "C:\Users\jonat\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\pdf2image\pdf2image.py", line 581, in pdfinfo_from_path
+    proc = Popen(command, env=env, stdout=PIPE, stderr=PIPE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 1538, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 74, in document_loader
+    return _pdf_to_images(file_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 102, in _pdf_to_images
+    images = convert_from_path(str(pdf_path))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\pdf2image\pdf2image.py", line 127, in convert_from_path
+    page_count = pdfinfo_from_path(
+                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\pdf2image\pdf2image.py", line 607, in pdfinfo_from_path
+    raise PDFInfoNotInstalledError(
+pdf2image.exceptions.PDFInfoNotInstalledError: Unable to get page count. Is poppler installed and in PATH?
+2025-11-17 13:38:19,177 - __main__ - ERROR - Error in process_document: Unable to get page count. Is poppler installed and in PATH?
+Traceback (most recent call last):
+  File "C:\Users\jonat\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\pdf2image\pdf2image.py", line 581, in pdfinfo_from_path
+    proc = Popen(command, env=env, stdout=PIPE, stderr=PIPE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 1538, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent01.py", line 137, in process_document
+    pages = document_loader(document_path, is_image=is_image)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 74, in document_loader
+    return _pdf_to_images(file_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 102, in _pdf_to_images
+    images = convert_from_path(str(pdf_path))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\pdf2image\pdf2image.py", line 127, in convert_from_path
+    page_count = pdfinfo_from_path(
+                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\pdf2image\pdf2image.py", line 607, in pdfinfo_from_path
+    raise PDFInfoNotInstalledError(
+pdf2image.exceptions.PDFInfoNotInstalledError: Unable to get page count. Is poppler installed and in PATH?
+2025-11-17 16:31:52,600 - __main__ - INFO - Loaded 5 agent configurations from prompt1_schema.json
+2025-11-17 16:31:52,600 - __main__ - INFO - Starting document processing: solar.pdf
+2025-11-17 16:31:52,600 - __main__ - INFO - Method: Image extraction
+2025-11-17 16:31:52,600 - __main__ - INFO - Step 1: Loading document
+2025-11-17 16:31:52,600 - agent_toolkit - INFO - Loading document: solar.pdf, is_image=True
+2025-11-17 16:31:52,600 - agent_toolkit - INFO - Converting PDF to images: solar.pdf
+2025-11-17 16:31:52,652 - agent_toolkit - WARNING - pdf2image failed: Unable to get page count. Is poppler installed and in PATH?, trying PyMuPDF fallback
+2025-11-17 16:31:52,885 - agent_toolkit - INFO - Saved image: solar\solar_page_1.png
+2025-11-17 16:31:53,081 - agent_toolkit - INFO - Saved image: solar\solar_page_2.png
+2025-11-17 16:31:53,264 - agent_toolkit - INFO - Saved image: solar\solar_page_3.png
+2025-11-17 16:31:53,554 - agent_toolkit - INFO - Saved image: solar\solar_page_4.png
+2025-11-17 16:31:53,780 - agent_toolkit - INFO - Saved image: solar\solar_page_5.png
+2025-11-17 16:31:53,982 - agent_toolkit - INFO - Saved image: solar\solar_page_6.png
+2025-11-17 16:31:54,164 - agent_toolkit - INFO - Saved image: solar\solar_page_7.png
+2025-11-17 16:31:54,164 - agent_toolkit - INFO - SUCCESS: Converted 7 pages to images using PyMuPDF
+2025-11-17 16:31:54,181 - __main__ - INFO - SUCCESS: Loaded 7 pages
+2025-11-17 16:31:54,181 - __main__ - INFO - SUCCESS: Using 5 agents
+2025-11-17 16:31:54,181 - __main__ - ERROR - Error in process_document: string indices must be integers, not 'str'
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent01.py", line 147, in process_document
+    logger.info(f"  Agent {idx}: {agent['model']}")
+                                  ~~~~~^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+2025-11-17 16:40:15,162 - __main__ - INFO - Loaded schema from prompt1_schema.json, creating agent configs
+2025-11-17 16:40:15,170 - __main__ - INFO - Loaded prompt from prompt1.py
+2025-11-17 16:40:15,170 - __main__ - INFO - Created 5 agent configurations from schema
+2025-11-17 16:40:15,170 - __main__ - INFO - Starting document processing: solar.pdf
+2025-11-17 16:40:15,170 - __main__ - INFO - Method: Image extraction
+2025-11-17 16:40:15,170 - __main__ - INFO - Step 1: Loading document
+2025-11-17 16:40:15,170 - agent_toolkit - INFO - Loading document: solar.pdf, is_image=True
+2025-11-17 16:40:15,170 - agent_toolkit - INFO - Converting PDF to images: solar.pdf
+2025-11-17 16:40:15,204 - agent_toolkit - WARNING - pdf2image failed: Unable to get page count. Is poppler installed and in PATH?, trying PyMuPDF fallback
+2025-11-17 16:40:15,414 - agent_toolkit - INFO - Saved image: solar\solar_page_1.png
+2025-11-17 16:40:15,615 - agent_toolkit - INFO - Saved image: solar\solar_page_2.png
+2025-11-17 16:40:15,803 - agent_toolkit - INFO - Saved image: solar\solar_page_3.png
+2025-11-17 16:40:16,068 - agent_toolkit - INFO - Saved image: solar\solar_page_4.png
+2025-11-17 16:40:16,284 - agent_toolkit - INFO - Saved image: solar\solar_page_5.png
+2025-11-17 16:40:16,481 - agent_toolkit - INFO - Saved image: solar\solar_page_6.png
+2025-11-17 16:40:16,668 - agent_toolkit - INFO - Saved image: solar\solar_page_7.png
+2025-11-17 16:40:16,668 - agent_toolkit - INFO - SUCCESS: Converted 7 pages to images using PyMuPDF
+2025-11-17 16:40:16,679 - __main__ - INFO - SUCCESS: Loaded 7 pages
+2025-11-17 16:40:16,679 - __main__ - INFO - SUCCESS: Using 5 agents
+2025-11-17 16:40:16,679 - __main__ - INFO -   Agent 1: gpt5-mini
+2025-11-17 16:40:16,679 - __main__ - INFO -   Agent 2: gpt-4o
+2025-11-17 16:40:16,679 - __main__ - INFO -   Agent 3: claude-sonnet-4.1
+2025-11-17 16:40:16,679 - __main__ - INFO -   Agent 4: claude-sonnet-4.5
+2025-11-17 16:40:16,679 - __main__ - INFO -   Agent 5: gemini-flash
+2025-11-17 16:40:16,679 - __main__ - INFO - Step 3: Processing pages with agents
+2025-11-17 16:40:16,679 - agent_toolkit - INFO - Starting round-robin: 7 pages, 5 agents
+2025-11-17 16:40:16,679 - agent_toolkit - INFO - Processing page 1/7 with 5 active agents
+2025-11-17 16:40:16,679 - agent_toolkit - INFO - Building agent: model=gpt5-mini, is_image=True
+2025-11-17 16:40:16,679 - agent_toolkit - INFO - Calling image LLM: gpt5-mini
+2025-11-17 16:40:16,679 - agent_toolkit - INFO - Calling LLM (image): gpt5-mini, image: solar\solar_page_1.png
+2025-11-17 16:40:26,262 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 16:40:26,271 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 16:40:26,271 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 16:40:26,271 - agent_toolkit - INFO - SUCCESS: LLM response cleaned and validated
+2025-11-17 16:40:26,271 - agent_toolkit - INFO - Running LLM judgment
+2025-11-17 16:40:26,277 - agent_toolkit - INFO - Starting LLM judgment with 1 judges
+2025-11-17 16:40:26,277 - agent_toolkit - INFO - Judge gpt-4o evaluating response
+2025-11-17 16:40:26,277 - agent_toolkit - INFO - Calling LLM (text): gpt-4o
+2025-11-17 16:40:29,527 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 16:40:29,535 - agent_toolkit - INFO - Judge gpt-4o: score=1.0, found=True
+2025-11-17 16:40:29,535 - agent_toolkit - INFO - SUCCESS: Judgment complete. Overall score: 1.0, Found: True
+2025-11-17 16:40:29,535 - agent_toolkit - INFO - SUCCESS: Agent builder completed
+2025-11-17 16:40:29,535 - agent_toolkit - INFO - Building agent: model=gpt-4o, is_image=True
+2025-11-17 16:40:29,535 - agent_toolkit - INFO - Calling image LLM: gpt-4o
+2025-11-17 16:40:29,535 - agent_toolkit - INFO - Calling LLM (image): gpt-4o, image: solar\solar_page_1.png
+2025-11-17 16:40:38,505 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 16:40:38,505 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 16:40:38,505 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 16:40:38,505 - agent_toolkit - INFO - SUCCESS: LLM response cleaned and validated
+2025-11-17 16:40:38,505 - agent_toolkit - INFO - Running LLM judgment
+2025-11-17 16:40:38,505 - agent_toolkit - INFO - Starting LLM judgment with 1 judges
+2025-11-17 16:40:38,505 - agent_toolkit - INFO - Judge gpt-4o evaluating response
+2025-11-17 16:40:38,505 - agent_toolkit - INFO - Calling LLM (text): gpt-4o
+2025-11-17 16:40:41,427 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 16:40:41,427 - agent_toolkit - INFO - Judge gpt-4o: score=1.0, found=True
+2025-11-17 16:40:41,427 - agent_toolkit - INFO - SUCCESS: Judgment complete. Overall score: 1.0, Found: True
+2025-11-17 16:40:41,427 - agent_toolkit - INFO - SUCCESS: Agent builder completed
+2025-11-17 16:40:41,427 - agent_toolkit - INFO - Building agent: model=claude-sonnet-4.1, is_image=True
+2025-11-17 16:40:41,427 - agent_toolkit - INFO - Calling image LLM: claude-sonnet-4.1
+2025-11-17 16:40:41,427 - agent_toolkit - INFO - Calling LLM (image): claude-sonnet-4.1, image: solar\solar_page_1.png
+2025-11-17 16:40:41,427 - agent_toolkit - ERROR - Anthropic image call error: anthropic package not installed
+2025-11-17 16:40:41,427 - agent_toolkit - ERROR - Error in llm_wrapper_image for claude-sonnet-4.1: anthropic package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 329, in llm_wrapper_image
+    return _anthropic_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 447, in _anthropic_image_call
+    raise ImportError("anthropic package not installed")
+ImportError: anthropic package not installed
+2025-11-17 16:40:41,427 - agent_toolkit - ERROR - Error in agent_builder: anthropic package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 825, in agent_builder
+    raw_response = llm_wrapper_image(model, data_input, prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 329, in llm_wrapper_image
+    return _anthropic_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 447, in _anthropic_image_call
+    raise ImportError("anthropic package not installed")
+ImportError: anthropic package not installed
+2025-11-17 16:40:41,427 - agent_toolkit - INFO - Building agent: model=claude-sonnet-4.5, is_image=True
+2025-11-17 16:40:41,427 - agent_toolkit - INFO - Calling image LLM: claude-sonnet-4.5
+2025-11-17 16:40:41,427 - agent_toolkit - INFO - Calling LLM (image): claude-sonnet-4.5, image: solar\solar_page_1.png
+2025-11-17 16:40:41,427 - agent_toolkit - ERROR - Anthropic image call error: anthropic package not installed
+2025-11-17 16:40:41,427 - agent_toolkit - ERROR - Error in llm_wrapper_image for claude-sonnet-4.5: anthropic package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 329, in llm_wrapper_image
+    return _anthropic_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 447, in _anthropic_image_call
+    raise ImportError("anthropic package not installed")
+ImportError: anthropic package not installed
+2025-11-17 16:40:41,427 - agent_toolkit - ERROR - Error in agent_builder: anthropic package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 825, in agent_builder
+    raw_response = llm_wrapper_image(model, data_input, prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 329, in llm_wrapper_image
+    return _anthropic_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 447, in _anthropic_image_call
+    raise ImportError("anthropic package not installed")
+ImportError: anthropic package not installed
+2025-11-17 16:40:41,427 - agent_toolkit - INFO - Building agent: model=gemini-flash, is_image=True
+2025-11-17 16:40:41,427 - agent_toolkit - INFO - Calling image LLM: gemini-flash
+2025-11-17 16:40:41,427 - agent_toolkit - INFO - Calling LLM (image): gemini-flash, image: solar\solar_page_1.png
+2025-11-17 16:40:41,427 - agent_toolkit - ERROR - Gemini image call error: google-generativeai package not installed
+2025-11-17 16:40:41,427 - agent_toolkit - ERROR - Error in llm_wrapper_image for gemini-flash: google-generativeai package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 331, in llm_wrapper_image
+    return _gemini_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 526, in _gemini_image_call
+    raise ImportError("google-generativeai package not installed")
+ImportError: google-generativeai package not installed
+2025-11-17 16:40:41,438 - agent_toolkit - ERROR - Error in agent_builder: google-generativeai package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 825, in agent_builder
+    raw_response = llm_wrapper_image(model, data_input, prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 331, in llm_wrapper_image
+    return _gemini_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 526, in _gemini_image_call
+    raise ImportError("google-generativeai package not installed")
+ImportError: google-generativeai package not installed
+2025-11-17 16:40:41,439 - agent_toolkit - INFO - Agent gpt5-mini found all required information on page 1
+2025-11-17 16:40:41,439 - agent_toolkit - INFO - Agent gpt-4o found all required information on page 1
+2025-11-17 16:40:41,439 - agent_toolkit - INFO - Processing page 2/7 with 3 active agents
+2025-11-17 16:40:41,439 - agent_toolkit - INFO - Building agent: model=claude-sonnet-4.1, is_image=True
+2025-11-17 16:40:41,439 - agent_toolkit - INFO - Calling image LLM: claude-sonnet-4.1
+2025-11-17 16:40:41,439 - agent_toolkit - INFO - Calling LLM (image): claude-sonnet-4.1, image: solar\solar_page_2.png
+2025-11-17 16:40:41,439 - agent_toolkit - ERROR - Anthropic image call error: anthropic package not installed
+2025-11-17 16:40:41,439 - agent_toolkit - ERROR - Error in llm_wrapper_image for claude-sonnet-4.1: anthropic package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 329, in llm_wrapper_image
+    return _anthropic_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 447, in _anthropic_image_call
+    raise ImportError("anthropic package not installed")
+ImportError: anthropic package not installed
+2025-11-17 16:40:41,440 - agent_toolkit - ERROR - Error in agent_builder: anthropic package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 825, in agent_builder
+    raw_response = llm_wrapper_image(model, data_input, prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 329, in llm_wrapper_image
+    return _anthropic_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 447, in _anthropic_image_call
+    raise ImportError("anthropic package not installed")
+ImportError: anthropic package not installed
+2025-11-17 16:40:41,440 - agent_toolkit - INFO - Building agent: model=claude-sonnet-4.5, is_image=True
+2025-11-17 16:40:41,440 - agent_toolkit - INFO - Calling image LLM: claude-sonnet-4.5
+2025-11-17 16:40:41,440 - agent_toolkit - INFO - Calling LLM (image): claude-sonnet-4.5, image: solar\solar_page_2.png
+2025-11-17 16:40:41,440 - agent_toolkit - ERROR - Anthropic image call error: anthropic package not installed
+2025-11-17 16:40:41,441 - agent_toolkit - ERROR - Error in llm_wrapper_image for claude-sonnet-4.5: anthropic package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 329, in llm_wrapper_image
+    return _anthropic_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 447, in _anthropic_image_call
+    raise ImportError("anthropic package not installed")
+ImportError: anthropic package not installed
+2025-11-17 16:40:41,441 - agent_toolkit - ERROR - Error in agent_builder: anthropic package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 825, in agent_builder
+    raw_response = llm_wrapper_image(model, data_input, prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 329, in llm_wrapper_image
+    return _anthropic_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 447, in _anthropic_image_call
+    raise ImportError("anthropic package not installed")
+ImportError: anthropic package not installed
+2025-11-17 16:40:41,441 - agent_toolkit - INFO - Building agent: model=gemini-flash, is_image=True
+2025-11-17 16:40:41,441 - agent_toolkit - INFO - Calling image LLM: gemini-flash
+2025-11-17 16:40:41,441 - agent_toolkit - INFO - Calling LLM (image): gemini-flash, image: solar\solar_page_2.png
+2025-11-17 16:40:41,441 - agent_toolkit - ERROR - Gemini image call error: google-generativeai package not installed
+2025-11-17 16:40:41,441 - agent_toolkit - ERROR - Error in llm_wrapper_image for gemini-flash: google-generativeai package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 331, in llm_wrapper_image
+    return _gemini_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 526, in _gemini_image_call
+    raise ImportError("google-generativeai package not installed")
+ImportError: google-generativeai package not installed
+2025-11-17 16:40:41,442 - agent_toolkit - ERROR - Error in agent_builder: google-generativeai package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 825, in agent_builder
+    raw_response = llm_wrapper_image(model, data_input, prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 331, in llm_wrapper_image
+    return _gemini_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 526, in _gemini_image_call
+    raise ImportError("google-generativeai package not installed")
+ImportError: google-generativeai package not installed
+2025-11-17 16:40:41,442 - agent_toolkit - INFO - Processing page 3/7 with 3 active agents
+2025-11-17 16:40:41,442 - agent_toolkit - INFO - Building agent: model=claude-sonnet-4.1, is_image=True
+2025-11-17 16:40:41,443 - agent_toolkit - INFO - Calling image LLM: claude-sonnet-4.1
+2025-11-17 16:40:41,443 - agent_toolkit - INFO - Calling LLM (image): claude-sonnet-4.1, image: solar\solar_page_3.png
+2025-11-17 16:40:41,443 - agent_toolkit - ERROR - Anthropic image call error: anthropic package not installed
+2025-11-17 16:40:41,443 - agent_toolkit - ERROR - Error in llm_wrapper_image for claude-sonnet-4.1: anthropic package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 329, in llm_wrapper_image
+    return _anthropic_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 447, in _anthropic_image_call
+    raise ImportError("anthropic package not installed")
+ImportError: anthropic package not installed
+2025-11-17 16:40:41,443 - agent_toolkit - ERROR - Error in agent_builder: anthropic package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 825, in agent_builder
+    raw_response = llm_wrapper_image(model, data_input, prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 329, in llm_wrapper_image
+    return _anthropic_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 447, in _anthropic_image_call
+    raise ImportError("anthropic package not installed")
+ImportError: anthropic package not installed
+2025-11-17 16:40:41,443 - agent_toolkit - INFO - Building agent: model=claude-sonnet-4.5, is_image=True
+2025-11-17 16:40:41,443 - agent_toolkit - INFO - Calling image LLM: claude-sonnet-4.5
+2025-11-17 16:40:41,443 - agent_toolkit - INFO - Calling LLM (image): claude-sonnet-4.5, image: solar\solar_page_3.png
+2025-11-17 16:40:41,443 - agent_toolkit - ERROR - Anthropic image call error: anthropic package not installed
+2025-11-17 16:40:41,443 - agent_toolkit - ERROR - Error in llm_wrapper_image for claude-sonnet-4.5: anthropic package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 329, in llm_wrapper_image
+    return _anthropic_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 447, in _anthropic_image_call
+    raise ImportError("anthropic package not installed")
+ImportError: anthropic package not installed
+2025-11-17 16:40:41,443 - agent_toolkit - ERROR - Error in agent_builder: anthropic package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 825, in agent_builder
+    raw_response = llm_wrapper_image(model, data_input, prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 329, in llm_wrapper_image
+    return _anthropic_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 447, in _anthropic_image_call
+    raise ImportError("anthropic package not installed")
+ImportError: anthropic package not installed
+2025-11-17 16:40:41,443 - agent_toolkit - INFO - Building agent: model=gemini-flash, is_image=True
+2025-11-17 16:40:41,443 - agent_toolkit - INFO - Calling image LLM: gemini-flash
+2025-11-17 16:40:41,443 - agent_toolkit - INFO - Calling LLM (image): gemini-flash, image: solar\solar_page_3.png
+2025-11-17 16:40:41,443 - agent_toolkit - ERROR - Gemini image call error: google-generativeai package not installed
+2025-11-17 16:40:41,443 - agent_toolkit - ERROR - Error in llm_wrapper_image for gemini-flash: google-generativeai package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 331, in llm_wrapper_image
+    return _gemini_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 526, in _gemini_image_call
+    raise ImportError("google-generativeai package not installed")
+ImportError: google-generativeai package not installed
+2025-11-17 16:40:41,443 - agent_toolkit - ERROR - Error in agent_builder: google-generativeai package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 825, in agent_builder
+    raw_response = llm_wrapper_image(model, data_input, prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 331, in llm_wrapper_image
+    return _gemini_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 526, in _gemini_image_call
+    raise ImportError("google-generativeai package not installed")
+ImportError: google-generativeai package not installed
+2025-11-17 16:40:41,447 - agent_toolkit - INFO - Processing page 4/7 with 3 active agents
+2025-11-17 16:40:41,447 - agent_toolkit - INFO - Building agent: model=claude-sonnet-4.1, is_image=True
+2025-11-17 16:40:41,447 - agent_toolkit - INFO - Calling image LLM: claude-sonnet-4.1
+2025-11-17 16:40:41,447 - agent_toolkit - INFO - Calling LLM (image): claude-sonnet-4.1, image: solar\solar_page_4.png
+2025-11-17 16:40:41,447 - agent_toolkit - ERROR - Anthropic image call error: anthropic package not installed
+2025-11-17 16:40:41,447 - agent_toolkit - ERROR - Error in llm_wrapper_image for claude-sonnet-4.1: anthropic package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 329, in llm_wrapper_image
+    return _anthropic_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 447, in _anthropic_image_call
+    raise ImportError("anthropic package not installed")
+ImportError: anthropic package not installed
+2025-11-17 16:40:41,447 - agent_toolkit - ERROR - Error in agent_builder: anthropic package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 825, in agent_builder
+    raw_response = llm_wrapper_image(model, data_input, prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 329, in llm_wrapper_image
+    return _anthropic_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 447, in _anthropic_image_call
+    raise ImportError("anthropic package not installed")
+ImportError: anthropic package not installed
+2025-11-17 16:40:41,447 - agent_toolkit - INFO - Building agent: model=claude-sonnet-4.5, is_image=True
+2025-11-17 16:40:41,447 - agent_toolkit - INFO - Calling image LLM: claude-sonnet-4.5
+2025-11-17 16:40:41,447 - agent_toolkit - INFO - Calling LLM (image): claude-sonnet-4.5, image: solar\solar_page_4.png
+2025-11-17 16:40:41,447 - agent_toolkit - ERROR - Anthropic image call error: anthropic package not installed
+2025-11-17 16:40:41,447 - agent_toolkit - ERROR - Error in llm_wrapper_image for claude-sonnet-4.5: anthropic package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 329, in llm_wrapper_image
+    return _anthropic_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 447, in _anthropic_image_call
+    raise ImportError("anthropic package not installed")
+ImportError: anthropic package not installed
+2025-11-17 16:40:41,447 - agent_toolkit - ERROR - Error in agent_builder: anthropic package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 825, in agent_builder
+    raw_response = llm_wrapper_image(model, data_input, prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 329, in llm_wrapper_image
+    return _anthropic_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 447, in _anthropic_image_call
+    raise ImportError("anthropic package not installed")
+ImportError: anthropic package not installed
+2025-11-17 16:40:41,449 - agent_toolkit - INFO - Building agent: model=gemini-flash, is_image=True
+2025-11-17 16:40:41,449 - agent_toolkit - INFO - Calling image LLM: gemini-flash
+2025-11-17 16:40:41,449 - agent_toolkit - INFO - Calling LLM (image): gemini-flash, image: solar\solar_page_4.png
+2025-11-17 16:40:41,449 - agent_toolkit - ERROR - Gemini image call error: google-generativeai package not installed
+2025-11-17 16:40:41,449 - agent_toolkit - ERROR - Error in llm_wrapper_image for gemini-flash: google-generativeai package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 331, in llm_wrapper_image
+    return _gemini_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 526, in _gemini_image_call
+    raise ImportError("google-generativeai package not installed")
+ImportError: google-generativeai package not installed
+2025-11-17 16:40:41,449 - agent_toolkit - ERROR - Error in agent_builder: google-generativeai package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 825, in agent_builder
+    raw_response = llm_wrapper_image(model, data_input, prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 331, in llm_wrapper_image
+    return _gemini_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 526, in _gemini_image_call
+    raise ImportError("google-generativeai package not installed")
+ImportError: google-generativeai package not installed
+2025-11-17 16:40:41,450 - agent_toolkit - INFO - Processing page 5/7 with 3 active agents
+2025-11-17 16:40:41,450 - agent_toolkit - INFO - Building agent: model=claude-sonnet-4.1, is_image=True
+2025-11-17 16:40:41,450 - agent_toolkit - INFO - Calling image LLM: claude-sonnet-4.1
+2025-11-17 16:40:41,450 - agent_toolkit - INFO - Calling LLM (image): claude-sonnet-4.1, image: solar\solar_page_5.png
+2025-11-17 16:40:41,450 - agent_toolkit - ERROR - Anthropic image call error: anthropic package not installed
+2025-11-17 16:40:41,450 - agent_toolkit - ERROR - Error in llm_wrapper_image for claude-sonnet-4.1: anthropic package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 329, in llm_wrapper_image
+    return _anthropic_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 447, in _anthropic_image_call
+    raise ImportError("anthropic package not installed")
+ImportError: anthropic package not installed
+2025-11-17 16:40:41,451 - agent_toolkit - ERROR - Error in agent_builder: anthropic package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 825, in agent_builder
+    raw_response = llm_wrapper_image(model, data_input, prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 329, in llm_wrapper_image
+    return _anthropic_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 447, in _anthropic_image_call
+    raise ImportError("anthropic package not installed")
+ImportError: anthropic package not installed
+2025-11-17 16:40:41,451 - agent_toolkit - INFO - Building agent: model=claude-sonnet-4.5, is_image=True
+2025-11-17 16:40:41,451 - agent_toolkit - INFO - Calling image LLM: claude-sonnet-4.5
+2025-11-17 16:40:41,451 - agent_toolkit - INFO - Calling LLM (image): claude-sonnet-4.5, image: solar\solar_page_5.png
+2025-11-17 16:40:41,451 - agent_toolkit - ERROR - Anthropic image call error: anthropic package not installed
+2025-11-17 16:40:41,451 - agent_toolkit - ERROR - Error in llm_wrapper_image for claude-sonnet-4.5: anthropic package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 329, in llm_wrapper_image
+    return _anthropic_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 447, in _anthropic_image_call
+    raise ImportError("anthropic package not installed")
+ImportError: anthropic package not installed
+2025-11-17 16:40:41,452 - agent_toolkit - ERROR - Error in agent_builder: anthropic package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 825, in agent_builder
+    raw_response = llm_wrapper_image(model, data_input, prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 329, in llm_wrapper_image
+    return _anthropic_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 447, in _anthropic_image_call
+    raise ImportError("anthropic package not installed")
+ImportError: anthropic package not installed
+2025-11-17 16:40:41,453 - agent_toolkit - INFO - Building agent: model=gemini-flash, is_image=True
+2025-11-17 16:40:41,453 - agent_toolkit - INFO - Calling image LLM: gemini-flash
+2025-11-17 16:40:41,453 - agent_toolkit - INFO - Calling LLM (image): gemini-flash, image: solar\solar_page_5.png
+2025-11-17 16:40:41,453 - agent_toolkit - ERROR - Gemini image call error: google-generativeai package not installed
+2025-11-17 16:40:41,453 - agent_toolkit - ERROR - Error in llm_wrapper_image for gemini-flash: google-generativeai package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 331, in llm_wrapper_image
+    return _gemini_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 526, in _gemini_image_call
+    raise ImportError("google-generativeai package not installed")
+ImportError: google-generativeai package not installed
+2025-11-17 16:40:41,453 - agent_toolkit - ERROR - Error in agent_builder: google-generativeai package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 825, in agent_builder
+    raw_response = llm_wrapper_image(model, data_input, prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 331, in llm_wrapper_image
+    return _gemini_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 526, in _gemini_image_call
+    raise ImportError("google-generativeai package not installed")
+ImportError: google-generativeai package not installed
+2025-11-17 16:40:41,454 - agent_toolkit - INFO - Processing page 6/7 with 3 active agents
+2025-11-17 16:40:41,454 - agent_toolkit - INFO - Building agent: model=claude-sonnet-4.1, is_image=True
+2025-11-17 16:40:41,454 - agent_toolkit - INFO - Calling image LLM: claude-sonnet-4.1
+2025-11-17 16:40:41,454 - agent_toolkit - INFO - Calling LLM (image): claude-sonnet-4.1, image: solar\solar_page_6.png
+2025-11-17 16:40:41,454 - agent_toolkit - ERROR - Anthropic image call error: anthropic package not installed
+2025-11-17 16:40:41,455 - agent_toolkit - ERROR - Error in llm_wrapper_image for claude-sonnet-4.1: anthropic package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 329, in llm_wrapper_image
+    return _anthropic_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 447, in _anthropic_image_call
+    raise ImportError("anthropic package not installed")
+ImportError: anthropic package not installed
+2025-11-17 16:40:41,455 - agent_toolkit - ERROR - Error in agent_builder: anthropic package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 825, in agent_builder
+    raw_response = llm_wrapper_image(model, data_input, prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 329, in llm_wrapper_image
+    return _anthropic_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 447, in _anthropic_image_call
+    raise ImportError("anthropic package not installed")
+ImportError: anthropic package not installed
+2025-11-17 16:40:41,455 - agent_toolkit - INFO - Building agent: model=claude-sonnet-4.5, is_image=True
+2025-11-17 16:40:41,455 - agent_toolkit - INFO - Calling image LLM: claude-sonnet-4.5
+2025-11-17 16:40:41,455 - agent_toolkit - INFO - Calling LLM (image): claude-sonnet-4.5, image: solar\solar_page_6.png
+2025-11-17 16:40:41,455 - agent_toolkit - ERROR - Anthropic image call error: anthropic package not installed
+2025-11-17 16:40:41,455 - agent_toolkit - ERROR - Error in llm_wrapper_image for claude-sonnet-4.5: anthropic package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 329, in llm_wrapper_image
+    return _anthropic_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 447, in _anthropic_image_call
+    raise ImportError("anthropic package not installed")
+ImportError: anthropic package not installed
+2025-11-17 16:40:41,455 - agent_toolkit - ERROR - Error in agent_builder: anthropic package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 825, in agent_builder
+    raw_response = llm_wrapper_image(model, data_input, prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 329, in llm_wrapper_image
+    return _anthropic_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 447, in _anthropic_image_call
+    raise ImportError("anthropic package not installed")
+ImportError: anthropic package not installed
+2025-11-17 16:40:41,457 - agent_toolkit - INFO - Building agent: model=gemini-flash, is_image=True
+2025-11-17 16:40:41,457 - agent_toolkit - INFO - Calling image LLM: gemini-flash
+2025-11-17 16:40:41,457 - agent_toolkit - INFO - Calling LLM (image): gemini-flash, image: solar\solar_page_6.png
+2025-11-17 16:40:41,457 - agent_toolkit - ERROR - Gemini image call error: google-generativeai package not installed
+2025-11-17 16:40:41,457 - agent_toolkit - ERROR - Error in llm_wrapper_image for gemini-flash: google-generativeai package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 331, in llm_wrapper_image
+    return _gemini_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 526, in _gemini_image_call
+    raise ImportError("google-generativeai package not installed")
+ImportError: google-generativeai package not installed
+2025-11-17 16:40:41,458 - agent_toolkit - ERROR - Error in agent_builder: google-generativeai package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 825, in agent_builder
+    raw_response = llm_wrapper_image(model, data_input, prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 331, in llm_wrapper_image
+    return _gemini_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 526, in _gemini_image_call
+    raise ImportError("google-generativeai package not installed")
+ImportError: google-generativeai package not installed
+2025-11-17 16:40:41,458 - agent_toolkit - INFO - Processing page 7/7 with 3 active agents
+2025-11-17 16:40:41,458 - agent_toolkit - INFO - Building agent: model=claude-sonnet-4.1, is_image=True
+2025-11-17 16:40:41,458 - agent_toolkit - INFO - Calling image LLM: claude-sonnet-4.1
+2025-11-17 16:40:41,459 - agent_toolkit - INFO - Calling LLM (image): claude-sonnet-4.1, image: solar\solar_page_7.png
+2025-11-17 16:40:41,459 - agent_toolkit - ERROR - Anthropic image call error: anthropic package not installed
+2025-11-17 16:40:41,459 - agent_toolkit - ERROR - Error in llm_wrapper_image for claude-sonnet-4.1: anthropic package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 329, in llm_wrapper_image
+    return _anthropic_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 447, in _anthropic_image_call
+    raise ImportError("anthropic package not installed")
+ImportError: anthropic package not installed
+2025-11-17 16:40:41,459 - agent_toolkit - ERROR - Error in agent_builder: anthropic package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 825, in agent_builder
+    raw_response = llm_wrapper_image(model, data_input, prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 329, in llm_wrapper_image
+    return _anthropic_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 447, in _anthropic_image_call
+    raise ImportError("anthropic package not installed")
+ImportError: anthropic package not installed
+2025-11-17 16:40:41,460 - agent_toolkit - INFO - Building agent: model=claude-sonnet-4.5, is_image=True
+2025-11-17 16:40:41,460 - agent_toolkit - INFO - Calling image LLM: claude-sonnet-4.5
+2025-11-17 16:40:41,460 - agent_toolkit - INFO - Calling LLM (image): claude-sonnet-4.5, image: solar\solar_page_7.png
+2025-11-17 16:40:41,460 - agent_toolkit - ERROR - Anthropic image call error: anthropic package not installed
+2025-11-17 16:40:41,460 - agent_toolkit - ERROR - Error in llm_wrapper_image for claude-sonnet-4.5: anthropic package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 329, in llm_wrapper_image
+    return _anthropic_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 447, in _anthropic_image_call
+    raise ImportError("anthropic package not installed")
+ImportError: anthropic package not installed
+2025-11-17 16:40:41,460 - agent_toolkit - ERROR - Error in agent_builder: anthropic package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 825, in agent_builder
+    raw_response = llm_wrapper_image(model, data_input, prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 329, in llm_wrapper_image
+    return _anthropic_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 447, in _anthropic_image_call
+    raise ImportError("anthropic package not installed")
+ImportError: anthropic package not installed
+2025-11-17 16:40:41,461 - agent_toolkit - INFO - Building agent: model=gemini-flash, is_image=True
+2025-11-17 16:40:41,461 - agent_toolkit - INFO - Calling image LLM: gemini-flash
+2025-11-17 16:40:41,461 - agent_toolkit - INFO - Calling LLM (image): gemini-flash, image: solar\solar_page_7.png
+2025-11-17 16:40:41,461 - agent_toolkit - ERROR - Gemini image call error: google-generativeai package not installed
+2025-11-17 16:40:41,461 - agent_toolkit - ERROR - Error in llm_wrapper_image for gemini-flash: google-generativeai package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 331, in llm_wrapper_image
+    return _gemini_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 526, in _gemini_image_call
+    raise ImportError("google-generativeai package not installed")
+ImportError: google-generativeai package not installed
+2025-11-17 16:40:41,462 - agent_toolkit - ERROR - Error in agent_builder: google-generativeai package not installed
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 825, in agent_builder
+    raw_response = llm_wrapper_image(model, data_input, prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 331, in llm_wrapper_image
+    return _gemini_image_call(model, image_path, prompt, system_prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 526, in _gemini_image_call
+    raise ImportError("google-generativeai package not installed")
+ImportError: google-generativeai package not installed
+2025-11-17 16:40:41,462 - agent_toolkit - INFO - SUCCESS: Round-robin complete. 23 total results
+2025-11-17 16:40:41,463 - __main__ - INFO - SUCCESS: Processed 23 results
+2025-11-17 16:40:41,463 - __main__ - INFO - SUCCESS: 2 agents found all required information
+2025-11-17 16:40:41,463 - __main__ - INFO - Step 4: Converting results to DataFrame
+2025-11-17 16:40:41,463 - agent_toolkit - INFO - Converting results to DataFrame
+2025-11-17 16:40:41,463 - agent_toolkit - INFO - SUCCESS: Created DataFrame with 23 rows and 13 columns
+2025-11-17 16:40:41,463 - __main__ - INFO - Step 5: Saving results to results.csv
+2025-11-17 16:40:41,475 - __main__ - INFO - SUCCESS: Saved results to results.csv
+2025-11-17 16:59:38,034 - agent_toolkit - INFO - Processing document: solar.pdf
+2025-11-17 16:59:38,034 - agent_toolkit - INFO - Method: Image extraction (saves each page as image)
+2025-11-17 16:59:38,034 - agent_toolkit - INFO - Loading prompt from: prompt1.py
+2025-11-17 16:59:38,034 - agent_toolkit - INFO - Loaded prompt from variable: prompt1
+2025-11-17 16:59:38,034 - agent_toolkit - INFO - Loading schema from: prompt1_schema.json
+2025-11-17 16:59:38,252 - agent_toolkit - INFO - Saved image: solar\solar_page_1.png
+2025-11-17 16:59:38,252 - agent_toolkit - INFO - Processing page 1/7
+2025-11-17 16:59:38,252 - agent_toolkit - INFO - Building agent: model=gpt5-mini, is_image=True
+2025-11-17 16:59:38,252 - agent_toolkit - INFO - Calling image LLM: gpt5-mini
+2025-11-17 16:59:38,252 - agent_toolkit - INFO - Calling LLM (image): gpt5-mini, image: solar\solar_page_1.png
+2025-11-17 16:59:43,633 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 16:59:43,659 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 16:59:43,659 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 16:59:43,660 - agent_toolkit - WARNING - Missing key in response: extracted.any_other_layout_detail.source
+2025-11-17 16:59:43,660 - agent_toolkit - INFO - SUCCESS: LLM response cleaned and validated
+2025-11-17 16:59:43,661 - agent_toolkit - INFO - Running LLM judgment
+2025-11-17 16:59:43,661 - agent_toolkit - INFO - Starting LLM judgment with 1 judges
+2025-11-17 16:59:43,661 - agent_toolkit - INFO - Judge gpt-4o evaluating response
+2025-11-17 16:59:43,661 - agent_toolkit - INFO - Calling LLM (text): gpt-4o
+2025-11-17 16:59:47,381 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 16:59:47,381 - agent_toolkit - INFO - Judge gpt-4o: score=0.9, found=True
+2025-11-17 16:59:47,381 - agent_toolkit - INFO - SUCCESS: Judgment complete. Overall score: 0.9, Found: True
+2025-11-17 16:59:47,381 - agent_toolkit - INFO - SUCCESS: Agent builder completed
+2025-11-17 16:59:47,381 - agent_toolkit - INFO - SUCCESS: Found all required information on page 1
+2025-11-17 16:59:47,381 - agent_toolkit - INFO - Converting results to DataFrame
+2025-11-17 16:59:47,381 - agent_toolkit - INFO - Converting results to DataFrame
+2025-11-17 16:59:47,381 - agent_toolkit - INFO - SUCCESS: Created DataFrame with 1 rows and 13 columns
+2025-11-17 16:59:47,389 - agent_toolkit - INFO - SUCCESS: Saved results to results.csv
+2025-11-17 17:25:15,320 - agent_toolkit - INFO - Processing document: solar.pdf
+2025-11-17 17:25:15,320 - agent_toolkit - INFO - Method: Image extraction (saves each page as image)
+2025-11-17 17:25:15,320 - agent_toolkit - INFO - Loading prompt from: land_and_layout.py
+2025-11-17 17:25:15,322 - agent_toolkit - INFO - Loaded prompt from variable: prompt1
+2025-11-17 17:25:15,322 - agent_toolkit - INFO - Loading schema from: prompt1_schema.json
+2025-11-17 17:25:15,322 - agent_toolkit - ERROR - Error in process_document_pages: [Errno 2] No such file or directory: 'prompt1_schema.json'
+Traceback (most recent call last):
+  File "C:\Users\jonat\OneDrive\Desktop\projects\next_agent\agent_toolkit.py", line 1074, in process_document_pages
+    with open(schema_path, 'r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'prompt1_schema.json'
+2025-11-17 17:26:26,355 - agent_toolkit - INFO - Processing document: solar.pdf
+2025-11-17 17:26:26,355 - agent_toolkit - INFO - Method: Image extraction (saves each page as image)
+2025-11-17 17:26:26,355 - agent_toolkit - INFO - Loading prompt from: land_and_layout.py
+2025-11-17 17:26:26,381 - agent_toolkit - INFO - Loaded prompt from variable: prompt1
+2025-11-17 17:26:26,382 - agent_toolkit - INFO - Loading schema from: prompt1_schema.json
+2025-11-17 17:26:26,581 - agent_toolkit - INFO - Saved image: solar\solar_page_1.png
+2025-11-17 17:26:26,581 - agent_toolkit - INFO - Processing page 1/7
+2025-11-17 17:26:26,581 - agent_toolkit - INFO - Building agent: model=gpt5-mini, is_image=True
+2025-11-17 17:26:26,581 - agent_toolkit - INFO - Calling image LLM: gpt5-mini
+2025-11-17 17:26:26,581 - agent_toolkit - INFO - Calling LLM (image): gpt5-mini, image: solar\solar_page_1.png
+2025-11-17 17:26:31,308 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 17:26:31,308 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 17:26:31,308 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 17:26:31,308 - agent_toolkit - WARNING - Missing key in response: extracted.area_megawatt_scale.source
+2025-11-17 17:26:31,308 - agent_toolkit - INFO - SUCCESS: LLM response cleaned and validated
+2025-11-17 17:26:31,308 - agent_toolkit - INFO - Running LLM judgment
+2025-11-17 17:26:31,308 - agent_toolkit - INFO - Starting LLM judgment with 1 judges
+2025-11-17 17:26:31,308 - agent_toolkit - INFO - Judge gpt-4o evaluating response
+2025-11-17 17:26:31,321 - agent_toolkit - INFO - Calling LLM (text): gpt-4o
+2025-11-17 17:26:34,691 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 17:26:34,691 - agent_toolkit - INFO - Judge gpt-4o: score=0.6, found=False
+2025-11-17 17:26:34,691 - agent_toolkit - INFO - SUCCESS: Judgment complete. Overall score: 0.6, Found: False
+2025-11-17 17:26:34,691 - agent_toolkit - INFO - SUCCESS: Agent builder completed
+2025-11-17 17:26:34,892 - agent_toolkit - INFO - Saved image: solar\solar_page_2.png
+2025-11-17 17:26:34,892 - agent_toolkit - INFO - Processing page 2/7
+2025-11-17 17:26:34,892 - agent_toolkit - INFO - Building agent: model=gpt5-mini, is_image=True
+2025-11-17 17:26:34,892 - agent_toolkit - INFO - Calling image LLM: gpt5-mini
+2025-11-17 17:26:34,892 - agent_toolkit - INFO - Calling LLM (image): gpt5-mini, image: solar\solar_page_2.png
+2025-11-17 17:26:38,813 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 17:26:38,829 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 17:26:38,829 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 17:26:38,829 - agent_toolkit - INFO - SUCCESS: LLM response cleaned and validated
+2025-11-17 17:26:38,829 - agent_toolkit - INFO - Running LLM judgment
+2025-11-17 17:26:38,829 - agent_toolkit - INFO - Starting LLM judgment with 1 judges
+2025-11-17 17:26:38,829 - agent_toolkit - INFO - Judge gpt-4o evaluating response
+2025-11-17 17:26:38,829 - agent_toolkit - INFO - Calling LLM (text): gpt-4o
+2025-11-17 17:26:45,011 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 17:26:45,049 - agent_toolkit - INFO - Judge gpt-4o: score=1.0, found=True
+2025-11-17 17:26:45,049 - agent_toolkit - INFO - SUCCESS: Judgment complete. Overall score: 1.0, Found: True
+2025-11-17 17:26:45,049 - agent_toolkit - INFO - SUCCESS: Agent builder completed
+2025-11-17 17:26:45,049 - agent_toolkit - INFO - SUCCESS: Found all required information on page 2
+2025-11-17 17:26:45,049 - agent_toolkit - INFO - Converting results to DataFrame
+2025-11-17 17:26:45,049 - agent_toolkit - INFO - Converting extraction results to DataFrame
+2025-11-17 17:26:45,049 - agent_toolkit - INFO - SUCCESS: Created DataFrame with 4 rows
+2025-11-17 17:26:45,049 - agent_toolkit - INFO - SUCCESS: Saved results to results.csv
+2025-11-17 21:50:02,109 - agent_toolkit - INFO - Processing document: solar.pdf
+2025-11-17 21:50:02,125 - agent_toolkit - INFO - Method: Image extraction (saves each page as image)
+2025-11-17 21:50:02,125 - agent_toolkit - INFO - Loading prompt from: land_and_layout.py
+2025-11-17 21:50:02,159 - agent_toolkit - INFO - Loaded prompt from variable: prompt1
+2025-11-17 21:50:02,159 - agent_toolkit - INFO - Loading schema from: prompt1_schema.json
+2025-11-17 21:50:02,377 - agent_toolkit - INFO - Saved image: solar\solar_page_1.png
+2025-11-17 21:50:02,377 - agent_toolkit - INFO - Processing page 1/7
+2025-11-17 21:50:02,377 - agent_toolkit - INFO - Building agent: model=gpt5-mini, is_image=True
+2025-11-17 21:50:02,377 - agent_toolkit - INFO - Calling image LLM: gpt5-mini
+2025-11-17 21:50:02,377 - agent_toolkit - INFO - Calling LLM (image): gpt5-mini, image: solar\solar_page_1.png
+2025-11-17 21:50:10,296 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 21:50:10,312 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 21:50:10,312 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 21:50:10,312 - agent_toolkit - INFO - SUCCESS: LLM response cleaned and validated
+2025-11-17 21:50:10,312 - agent_toolkit - INFO - Running LLM judgment
+2025-11-17 21:50:10,324 - agent_toolkit - INFO - Starting LLM judgment with 1 judges
+2025-11-17 21:50:10,324 - agent_toolkit - INFO - Judge gpt-4o evaluating response
+2025-11-17 21:50:10,324 - agent_toolkit - INFO - Calling LLM (text): gpt-4o
+2025-11-17 21:50:13,367 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 21:50:13,384 - agent_toolkit - INFO - Judge gpt-4o: score=1.0, found=True
+2025-11-17 21:50:13,384 - agent_toolkit - INFO - SUCCESS: Judgment complete. Overall score: 1.0, Found: True
+2025-11-17 21:50:13,384 - agent_toolkit - INFO - SUCCESS: Agent builder completed
+2025-11-17 21:50:13,385 - agent_toolkit - INFO - SUCCESS: Found all required information on page 1
+2025-11-17 21:50:13,386 - agent_toolkit - INFO - Converting results to DataFrame
+2025-11-17 21:50:13,386 - agent_toolkit - INFO - Converting extraction results to DataFrame
+2025-11-17 21:50:13,387 - agent_toolkit - INFO - SUCCESS: Created DataFrame with 1 rows
+2025-11-17 21:50:13,390 - agent_toolkit - INFO - SUCCESS: Saved results to results.csv
+2025-11-17 22:08:55,957 - agent_toolkit - ERROR - Error loading prompt: No prompt variable found in land_and_layout.py. Expected: prompt, prompt1, PROMPT, or prompt_text
+2025-11-17 22:09:54,083 - agent_toolkit - INFO - Loaded prompt from variable: prompt
+2025-11-17 22:09:54,083 - agent_toolkit - INFO - Loaded prompt from variable: prompt
+2025-11-17 22:09:54,083 - agent_toolkit - INFO - Loading document: solar.pdf, is_image=True
+2025-11-17 22:09:54,083 - agent_toolkit - INFO - Converting PDF to images: solar.pdf
+2025-11-17 22:09:54,160 - agent_toolkit - WARNING - pdf2image failed: Unable to get page count. Is poppler installed and in PATH?, trying PyMuPDF fallback
+2025-11-17 22:09:54,367 - agent_toolkit - INFO - Saved image: solar\solar_page_1.png
+2025-11-17 22:09:54,567 - agent_toolkit - INFO - Saved image: solar\solar_page_2.png
+2025-11-17 22:09:54,771 - agent_toolkit - INFO - Saved image: solar\solar_page_3.png
+2025-11-17 22:09:55,047 - agent_toolkit - INFO - Saved image: solar\solar_page_4.png
+2025-11-17 22:09:55,268 - agent_toolkit - INFO - Saved image: solar\solar_page_5.png
+2025-11-17 22:09:55,469 - agent_toolkit - INFO - Saved image: solar\solar_page_6.png
+2025-11-17 22:09:55,682 - agent_toolkit - INFO - Saved image: solar\solar_page_7.png
+2025-11-17 22:09:55,682 - agent_toolkit - INFO - SUCCESS: Converted 7 pages to images using PyMuPDF
+2025-11-17 22:09:55,682 - agent_toolkit - INFO - Building agent: model=gpt5-mini, is_image=True
+2025-11-17 22:09:55,682 - agent_toolkit - INFO - Calling image LLM: gpt5-mini
+2025-11-17 22:09:55,682 - agent_toolkit - INFO - Calling LLM (image): gpt5-mini, image: solar\solar_page_1.png
+2025-11-17 22:10:00,325 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:10:00,340 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:10:00,340 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:10:00,342 - agent_toolkit - INFO - SUCCESS: LLM response cleaned and validated
+2025-11-17 22:10:00,342 - agent_toolkit - INFO - Running LLM judgment
+2025-11-17 22:10:00,342 - agent_toolkit - INFO - Starting LLM judgment with 1 judges
+2025-11-17 22:10:00,342 - agent_toolkit - INFO - Judge gpt-4o evaluating response
+2025-11-17 22:10:00,342 - agent_toolkit - INFO - Calling LLM (text): gpt-4o
+2025-11-17 22:10:03,299 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:10:03,299 - agent_toolkit - INFO - Judge gpt-4o: score=1.0, found=True
+2025-11-17 22:10:03,299 - agent_toolkit - INFO - SUCCESS: Judgment complete. Overall score: 1.0, Found: True
+2025-11-17 22:10:03,299 - agent_toolkit - INFO - SUCCESS: Agent builder completed
+2025-11-17 22:10:03,299 - agent_toolkit - INFO - Building agent: model=gpt5-mini, is_image=True
+2025-11-17 22:10:03,299 - agent_toolkit - INFO - Calling image LLM: gpt5-mini
+2025-11-17 22:10:03,299 - agent_toolkit - INFO - Calling LLM (image): gpt5-mini, image: solar\solar_page_1.png
+2025-11-17 22:10:07,517 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:10:07,519 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:10:07,519 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:10:07,519 - agent_toolkit - WARNING - Missing key in response: extracted.DC_side.source
+2025-11-17 22:10:07,519 - agent_toolkit - WARNING - Missing key in response: extracted.AC_side.source
+2025-11-17 22:10:07,519 - agent_toolkit - WARNING - Missing key in response: extracted.HT_side.source
+2025-11-17 22:10:07,519 - agent_toolkit - WARNING - Missing key in response: extracted.quantities.source
+2025-11-17 22:10:07,519 - agent_toolkit - INFO - SUCCESS: LLM response cleaned and validated
+2025-11-17 22:10:07,519 - agent_toolkit - INFO - Running LLM judgment
+2025-11-17 22:10:07,519 - agent_toolkit - INFO - Starting LLM judgment with 1 judges
+2025-11-17 22:10:07,519 - agent_toolkit - INFO - Judge gpt-4o evaluating response
+2025-11-17 22:10:07,521 - agent_toolkit - INFO - Calling LLM (text): gpt-4o
+2025-11-17 22:10:09,829 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:10:09,829 - agent_toolkit - INFO - Judge gpt-4o: score=0.5, found=False
+2025-11-17 22:10:09,829 - agent_toolkit - INFO - SUCCESS: Judgment complete. Overall score: 0.5, Found: False
+2025-11-17 22:10:09,829 - agent_toolkit - INFO - SUCCESS: Agent builder completed
+2025-11-17 22:10:09,829 - agent_toolkit - INFO - Building agent: model=gpt5-mini, is_image=True
+2025-11-17 22:10:09,829 - agent_toolkit - INFO - Calling image LLM: gpt5-mini
+2025-11-17 22:10:09,829 - agent_toolkit - INFO - Calling LLM (image): gpt5-mini, image: solar\solar_page_2.png
+2025-11-17 22:10:15,194 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:10:15,194 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:10:15,194 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:10:15,194 - agent_toolkit - WARNING - Missing key in response: extracted.DC_side.source
+2025-11-17 22:10:15,194 - agent_toolkit - WARNING - Missing key in response: extracted.HT_side.source
+2025-11-17 22:10:15,194 - agent_toolkit - WARNING - Missing key in response: extracted.quantities.source
+2025-11-17 22:10:15,194 - agent_toolkit - INFO - SUCCESS: LLM response cleaned and validated
+2025-11-17 22:10:15,194 - agent_toolkit - INFO - Running LLM judgment
+2025-11-17 22:10:15,194 - agent_toolkit - INFO - Starting LLM judgment with 1 judges
+2025-11-17 22:10:15,194 - agent_toolkit - INFO - Judge gpt-4o evaluating response
+2025-11-17 22:10:15,194 - agent_toolkit - INFO - Calling LLM (text): gpt-4o
+2025-11-17 22:10:18,150 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:10:18,150 - agent_toolkit - INFO - Judge gpt-4o: score=0.7, found=False
+2025-11-17 22:10:18,150 - agent_toolkit - INFO - SUCCESS: Judgment complete. Overall score: 0.7, Found: False
+2025-11-17 22:10:18,150 - agent_toolkit - INFO - SUCCESS: Agent builder completed
+2025-11-17 22:10:18,150 - agent_toolkit - INFO - Building agent: model=gpt5-mini, is_image=True
+2025-11-17 22:10:18,150 - agent_toolkit - INFO - Calling image LLM: gpt5-mini
+2025-11-17 22:10:18,150 - agent_toolkit - INFO - Calling LLM (image): gpt5-mini, image: solar\solar_page_3.png
+2025-11-17 22:10:24,521 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:10:24,521 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:10:24,521 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:10:24,521 - agent_toolkit - WARNING - Missing key in response: extracted.DC_side.source
+2025-11-17 22:10:24,521 - agent_toolkit - WARNING - Missing key in response: extracted.AC_side.source
+2025-11-17 22:10:24,521 - agent_toolkit - WARNING - Missing key in response: extracted.HT_side.source
+2025-11-17 22:10:24,521 - agent_toolkit - WARNING - Missing key in response: extracted.quantities.source
+2025-11-17 22:10:24,521 - agent_toolkit - INFO - SUCCESS: LLM response cleaned and validated
+2025-11-17 22:10:24,521 - agent_toolkit - INFO - Running LLM judgment
+2025-11-17 22:10:24,521 - agent_toolkit - INFO - Starting LLM judgment with 1 judges
+2025-11-17 22:10:24,521 - agent_toolkit - INFO - Judge gpt-4o evaluating response
+2025-11-17 22:10:24,521 - agent_toolkit - INFO - Calling LLM (text): gpt-4o
+2025-11-17 22:10:26,843 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:10:26,843 - agent_toolkit - INFO - Judge gpt-4o: score=0.4, found=False
+2025-11-17 22:10:26,843 - agent_toolkit - INFO - SUCCESS: Judgment complete. Overall score: 0.4, Found: False
+2025-11-17 22:10:26,843 - agent_toolkit - INFO - SUCCESS: Agent builder completed
+2025-11-17 22:10:26,843 - agent_toolkit - INFO - Building agent: model=gpt5-mini, is_image=True
+2025-11-17 22:10:26,843 - agent_toolkit - INFO - Calling image LLM: gpt5-mini
+2025-11-17 22:10:26,843 - agent_toolkit - INFO - Calling LLM (image): gpt5-mini, image: solar\solar_page_4.png
+2025-11-17 22:10:32,899 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:10:32,899 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:10:32,899 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:10:32,903 - agent_toolkit - INFO - SUCCESS: LLM response cleaned and validated
+2025-11-17 22:10:32,903 - agent_toolkit - INFO - Running LLM judgment
+2025-11-17 22:10:32,903 - agent_toolkit - INFO - Starting LLM judgment with 1 judges
+2025-11-17 22:10:32,903 - agent_toolkit - INFO - Judge gpt-4o evaluating response
+2025-11-17 22:10:32,903 - agent_toolkit - INFO - Calling LLM (text): gpt-4o
+2025-11-17 22:10:36,457 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:10:36,457 - agent_toolkit - INFO - Judge gpt-4o: score=0.8, found=False
+2025-11-17 22:10:36,457 - agent_toolkit - INFO - SUCCESS: Judgment complete. Overall score: 0.8, Found: False
+2025-11-17 22:10:36,457 - agent_toolkit - INFO - SUCCESS: Agent builder completed
+2025-11-17 22:10:36,472 - agent_toolkit - INFO - Building agent: model=gpt5-mini, is_image=True
+2025-11-17 22:10:36,472 - agent_toolkit - INFO - Calling image LLM: gpt5-mini
+2025-11-17 22:10:36,472 - agent_toolkit - INFO - Calling LLM (image): gpt5-mini, image: solar\solar_page_5.png
+2025-11-17 22:10:44,037 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:10:44,037 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:10:44,037 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:10:44,037 - agent_toolkit - INFO - SUCCESS: LLM response cleaned and validated
+2025-11-17 22:10:44,037 - agent_toolkit - INFO - Running LLM judgment
+2025-11-17 22:10:44,037 - agent_toolkit - INFO - Starting LLM judgment with 1 judges
+2025-11-17 22:10:44,037 - agent_toolkit - INFO - Judge gpt-4o evaluating response
+2025-11-17 22:10:44,037 - agent_toolkit - INFO - Calling LLM (text): gpt-4o
+2025-11-17 22:10:46,160 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:10:46,170 - agent_toolkit - INFO - Judge gpt-4o: score=1.0, found=True
+2025-11-17 22:10:46,170 - agent_toolkit - INFO - SUCCESS: Judgment complete. Overall score: 1.0, Found: True
+2025-11-17 22:10:46,170 - agent_toolkit - INFO - SUCCESS: Agent builder completed
+2025-11-17 22:40:20,451 - agent_toolkit - INFO - Loaded prompt from variable: prompt
+2025-11-17 22:40:20,451 - agent_toolkit - INFO - Loaded prompt from variable: prompt
+2025-11-17 22:40:20,451 - agent_toolkit - INFO - Loading document: solar.pdf, is_image=True
+2025-11-17 22:40:20,451 - agent_toolkit - INFO - Converting PDF to images: solar.pdf
+2025-11-17 22:40:20,511 - agent_toolkit - WARNING - pdf2image failed: Unable to get page count. Is poppler installed and in PATH?, trying PyMuPDF fallback
+2025-11-17 22:40:20,724 - agent_toolkit - INFO - Saved image: solar\solar_page_1.png
+2025-11-17 22:40:20,924 - agent_toolkit - INFO - Saved image: solar\solar_page_2.png
+2025-11-17 22:40:21,125 - agent_toolkit - INFO - Saved image: solar\solar_page_3.png
+2025-11-17 22:40:21,389 - agent_toolkit - INFO - Saved image: solar\solar_page_4.png
+2025-11-17 22:40:21,617 - agent_toolkit - INFO - Saved image: solar\solar_page_5.png
+2025-11-17 22:40:21,827 - agent_toolkit - INFO - Saved image: solar\solar_page_6.png
+2025-11-17 22:40:22,028 - agent_toolkit - INFO - Saved image: solar\solar_page_7.png
+2025-11-17 22:40:22,034 - agent_toolkit - INFO - SUCCESS: Converted 7 pages to images using PyMuPDF
+2025-11-17 22:40:22,036 - agent_toolkit - INFO - Building agent: model=gpt5-mini, is_image=True
+2025-11-17 22:40:22,036 - agent_toolkit - INFO - Calling image LLM: gpt5-mini
+2025-11-17 22:40:22,036 - agent_toolkit - INFO - Calling LLM (image): gpt5-mini, image: solar\solar_page_1.png
+2025-11-17 22:40:25,862 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:40:25,862 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:40:25,862 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:40:25,862 - agent_toolkit - INFO - SUCCESS: LLM response cleaned and validated
+2025-11-17 22:40:25,862 - agent_toolkit - INFO - Running LLM judgment
+2025-11-17 22:40:25,862 - agent_toolkit - INFO - Starting LLM judgment with 1 judges
+2025-11-17 22:40:25,877 - agent_toolkit - INFO - Judge gpt-4o evaluating response
+2025-11-17 22:40:25,877 - agent_toolkit - INFO - Calling LLM (text): gpt-4o
+2025-11-17 22:40:28,464 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:40:28,487 - agent_toolkit - INFO - Judge gpt-4o: score=1.0, found=True
+2025-11-17 22:40:28,487 - agent_toolkit - INFO - SUCCESS: Judgment complete. Overall score: 1.0, Found: True
+2025-11-17 22:40:28,487 - agent_toolkit - INFO - SUCCESS: Agent builder completed
+2025-11-17 22:40:28,491 - agent_toolkit - INFO - Building agent: model=gpt5-mini, is_image=True
+2025-11-17 22:40:28,491 - agent_toolkit - INFO - Calling image LLM: gpt5-mini
+2025-11-17 22:40:28,491 - agent_toolkit - INFO - Calling LLM (image): gpt5-mini, image: solar\solar_page_1.png
+2025-11-17 22:40:32,921 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:40:32,921 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:40:32,921 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:40:32,921 - agent_toolkit - WARNING - Missing key in response: extracted.DC_side.source
+2025-11-17 22:40:32,921 - agent_toolkit - WARNING - Missing key in response: extracted.AC_side.source
+2025-11-17 22:40:32,921 - agent_toolkit - WARNING - Missing key in response: extracted.HT_side.source
+2025-11-17 22:40:32,921 - agent_toolkit - WARNING - Missing key in response: extracted.quantities.source
+2025-11-17 22:40:32,921 - agent_toolkit - INFO - SUCCESS: LLM response cleaned and validated
+2025-11-17 22:40:32,921 - agent_toolkit - INFO - Running LLM judgment
+2025-11-17 22:40:32,921 - agent_toolkit - INFO - Starting LLM judgment with 1 judges
+2025-11-17 22:40:32,921 - agent_toolkit - INFO - Judge gpt-4o evaluating response
+2025-11-17 22:40:32,921 - agent_toolkit - INFO - Calling LLM (text): gpt-4o
+2025-11-17 22:40:35,285 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:40:35,285 - agent_toolkit - INFO - Judge gpt-4o: score=0.3, found=False
+2025-11-17 22:40:35,285 - agent_toolkit - INFO - SUCCESS: Judgment complete. Overall score: 0.3, Found: False
+2025-11-17 22:40:35,285 - agent_toolkit - INFO - SUCCESS: Agent builder completed
+2025-11-17 22:40:35,301 - agent_toolkit - INFO - Building agent: model=gpt5-mini, is_image=True
+2025-11-17 22:40:35,301 - agent_toolkit - INFO - Calling image LLM: gpt5-mini
+2025-11-17 22:40:35,301 - agent_toolkit - INFO - Calling LLM (image): gpt5-mini, image: solar\solar_page_2.png
+2025-11-17 22:40:40,844 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:40:40,845 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:40:40,845 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:40:40,846 - agent_toolkit - WARNING - Missing key in response: extracted.DC_side.source
+2025-11-17 22:40:40,846 - agent_toolkit - WARNING - Missing key in response: extracted.HT_side.source
+2025-11-17 22:40:40,846 - agent_toolkit - WARNING - Missing key in response: extracted.quantities.source
+2025-11-17 22:40:40,846 - agent_toolkit - INFO - SUCCESS: LLM response cleaned and validated
+2025-11-17 22:40:40,846 - agent_toolkit - INFO - Running LLM judgment
+2025-11-17 22:40:40,846 - agent_toolkit - INFO - Starting LLM judgment with 1 judges
+2025-11-17 22:40:40,847 - agent_toolkit - INFO - Judge gpt-4o evaluating response
+2025-11-17 22:40:40,847 - agent_toolkit - INFO - Calling LLM (text): gpt-4o
+2025-11-17 22:40:43,752 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:40:43,768 - agent_toolkit - INFO - Judge gpt-4o: score=0.5, found=False
+2025-11-17 22:40:43,768 - agent_toolkit - INFO - SUCCESS: Judgment complete. Overall score: 0.5, Found: False
+2025-11-17 22:40:43,768 - agent_toolkit - INFO - SUCCESS: Agent builder completed
+2025-11-17 22:40:43,768 - agent_toolkit - INFO - Building agent: model=gpt5-mini, is_image=True
+2025-11-17 22:40:43,768 - agent_toolkit - INFO - Calling image LLM: gpt5-mini
+2025-11-17 22:40:43,768 - agent_toolkit - INFO - Calling LLM (image): gpt5-mini, image: solar\solar_page_3.png
+2025-11-17 22:40:48,455 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:40:48,456 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:40:48,457 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:40:48,457 - agent_toolkit - WARNING - Missing key in response: extracted.DC_side.source
+2025-11-17 22:40:48,457 - agent_toolkit - WARNING - Missing key in response: extracted.AC_side.source
+2025-11-17 22:40:48,458 - agent_toolkit - WARNING - Missing key in response: extracted.HT_side.source
+2025-11-17 22:40:48,458 - agent_toolkit - WARNING - Missing key in response: extracted.quantities.source
+2025-11-17 22:40:48,458 - agent_toolkit - INFO - SUCCESS: LLM response cleaned and validated
+2025-11-17 22:40:48,458 - agent_toolkit - INFO - Running LLM judgment
+2025-11-17 22:40:48,458 - agent_toolkit - INFO - Starting LLM judgment with 1 judges
+2025-11-17 22:40:48,458 - agent_toolkit - INFO - Judge gpt-4o evaluating response
+2025-11-17 22:40:48,458 - agent_toolkit - INFO - Calling LLM (text): gpt-4o
+2025-11-17 22:40:50,892 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:40:50,893 - agent_toolkit - INFO - Judge gpt-4o: score=0.5, found=False
+2025-11-17 22:40:50,893 - agent_toolkit - INFO - SUCCESS: Judgment complete. Overall score: 0.5, Found: False
+2025-11-17 22:40:50,893 - agent_toolkit - INFO - SUCCESS: Agent builder completed
+2025-11-17 22:40:50,893 - agent_toolkit - INFO - Building agent: model=gpt5-mini, is_image=True
+2025-11-17 22:40:50,893 - agent_toolkit - INFO - Calling image LLM: gpt5-mini
+2025-11-17 22:40:50,893 - agent_toolkit - INFO - Calling LLM (image): gpt5-mini, image: solar\solar_page_4.png
+2025-11-17 22:40:58,186 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:40:58,186 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:40:58,186 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:40:58,186 - agent_toolkit - INFO - SUCCESS: LLM response cleaned and validated
+2025-11-17 22:40:58,186 - agent_toolkit - INFO - Running LLM judgment
+2025-11-17 22:40:58,186 - agent_toolkit - INFO - Starting LLM judgment with 1 judges
+2025-11-17 22:40:58,186 - agent_toolkit - INFO - Judge gpt-4o evaluating response
+2025-11-17 22:40:58,186 - agent_toolkit - INFO - Calling LLM (text): gpt-4o
+2025-11-17 22:41:00,296 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:41:00,296 - agent_toolkit - INFO - Judge gpt-4o: score=0.8, found=True
+2025-11-17 22:41:00,296 - agent_toolkit - INFO - SUCCESS: Judgment complete. Overall score: 0.8, Found: True
+2025-11-17 22:41:00,296 - agent_toolkit - INFO - SUCCESS: Agent builder completed
+2025-11-17 22:43:39,647 - agent_toolkit - INFO - Loaded prompt from variable: prompt
+2025-11-17 22:43:39,647 - agent_toolkit - INFO - Loaded prompt from variable: prompt
+2025-11-17 22:43:39,647 - agent_toolkit - INFO - Loading document: solar.pdf, is_image=True
+2025-11-17 22:43:39,647 - agent_toolkit - INFO - Converting PDF to images: solar.pdf
+2025-11-17 22:43:39,707 - agent_toolkit - WARNING - pdf2image failed: Unable to get page count. Is poppler installed and in PATH?, trying PyMuPDF fallback
+2025-11-17 22:43:39,911 - agent_toolkit - INFO - Saved image: solar\solar_page_1.png
+2025-11-17 22:43:40,110 - agent_toolkit - INFO - Saved image: solar\solar_page_2.png
+2025-11-17 22:43:40,311 - agent_toolkit - INFO - Saved image: solar\solar_page_3.png
+2025-11-17 22:43:40,583 - agent_toolkit - INFO - Saved image: solar\solar_page_4.png
+2025-11-17 22:43:40,804 - agent_toolkit - INFO - Saved image: solar\solar_page_5.png
+2025-11-17 22:43:40,999 - agent_toolkit - INFO - Saved image: solar\solar_page_6.png
+2025-11-17 22:43:41,193 - agent_toolkit - INFO - Saved image: solar\solar_page_7.png
+2025-11-17 22:43:41,200 - agent_toolkit - INFO - SUCCESS: Converted 7 pages to images using PyMuPDF
+2025-11-17 22:43:41,200 - agent_toolkit - INFO - Building agent: model=gpt5-mini, is_image=True
+2025-11-17 22:43:41,200 - agent_toolkit - INFO - Calling image LLM: gpt5-mini
+2025-11-17 22:43:41,200 - agent_toolkit - INFO - Calling LLM (image): gpt5-mini, image: solar\solar_page_1.png
+2025-11-17 22:43:45,164 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:43:45,180 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:43:45,180 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:43:45,180 - agent_toolkit - INFO - SUCCESS: LLM response cleaned and validated
+2025-11-17 22:43:45,180 - agent_toolkit - INFO - Running LLM judgment
+2025-11-17 22:43:45,191 - agent_toolkit - INFO - Starting LLM judgment with 1 judges
+2025-11-17 22:43:45,191 - agent_toolkit - INFO - Judge gpt-4o evaluating response
+2025-11-17 22:43:45,191 - agent_toolkit - INFO - Calling LLM (text): gpt-4o
+2025-11-17 22:43:46,536 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:43:46,536 - agent_toolkit - INFO - Judge gpt-4o: score=1.0, found=True
+2025-11-17 22:43:46,536 - agent_toolkit - INFO - SUCCESS: Judgment complete. Overall score: 1.0, Found: True
+2025-11-17 22:43:46,536 - agent_toolkit - INFO - SUCCESS: Agent builder completed
+2025-11-17 22:43:46,538 - agent_toolkit - INFO - Building agent: model=gpt5-mini, is_image=True
+2025-11-17 22:43:46,538 - agent_toolkit - INFO - Calling image LLM: gpt5-mini
+2025-11-17 22:43:46,538 - agent_toolkit - INFO - Calling LLM (image): gpt5-mini, image: solar\solar_page_1.png
+2025-11-17 22:43:49,946 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:43:49,946 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:43:49,946 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:43:49,946 - agent_toolkit - WARNING - Missing key in response: extracted.DC_side.source
+2025-11-17 22:43:49,946 - agent_toolkit - WARNING - Missing key in response: extracted.AC_side.source
+2025-11-17 22:43:49,946 - agent_toolkit - WARNING - Missing key in response: extracted.HT_side.source
+2025-11-17 22:43:49,946 - agent_toolkit - WARNING - Missing key in response: extracted.quantities.source
+2025-11-17 22:43:49,946 - agent_toolkit - INFO - SUCCESS: LLM response cleaned and validated
+2025-11-17 22:43:49,946 - agent_toolkit - INFO - Running LLM judgment
+2025-11-17 22:43:49,946 - agent_toolkit - INFO - Starting LLM judgment with 1 judges
+2025-11-17 22:43:49,946 - agent_toolkit - INFO - Judge gpt-4o evaluating response
+2025-11-17 22:43:49,946 - agent_toolkit - INFO - Calling LLM (text): gpt-4o
+2025-11-17 22:43:54,461 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:43:54,461 - agent_toolkit - INFO - Judge gpt-4o: score=0.6, found=False
+2025-11-17 22:43:54,462 - agent_toolkit - INFO - SUCCESS: Judgment complete. Overall score: 0.6, Found: False
+2025-11-17 22:43:54,462 - agent_toolkit - INFO - SUCCESS: Agent builder completed
+2025-11-17 22:43:54,463 - agent_toolkit - INFO - Building agent: model=gpt5-mini, is_image=True
+2025-11-17 22:43:54,463 - agent_toolkit - INFO - Calling image LLM: gpt5-mini
+2025-11-17 22:43:54,463 - agent_toolkit - INFO - Calling LLM (image): gpt5-mini, image: solar\solar_page_2.png
+2025-11-17 22:44:00,315 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:44:00,315 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:44:00,315 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:44:00,317 - agent_toolkit - INFO - SUCCESS: LLM response cleaned and validated
+2025-11-17 22:44:00,317 - agent_toolkit - INFO - Running LLM judgment
+2025-11-17 22:44:00,317 - agent_toolkit - INFO - Starting LLM judgment with 1 judges
+2025-11-17 22:44:00,317 - agent_toolkit - INFO - Judge gpt-4o evaluating response
+2025-11-17 22:44:00,317 - agent_toolkit - INFO - Calling LLM (text): gpt-4o
+2025-11-17 22:44:03,279 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:44:03,297 - agent_toolkit - INFO - Judge gpt-4o: score=0.8, found=True
+2025-11-17 22:44:03,297 - agent_toolkit - INFO - SUCCESS: Judgment complete. Overall score: 0.8, Found: True
+2025-11-17 22:44:03,297 - agent_toolkit - INFO - SUCCESS: Agent builder completed
+2025-11-17 22:46:19,275 - agent_toolkit - INFO - Loaded prompt from variable: prompt
+2025-11-17 22:46:19,275 - agent_toolkit - INFO - Loaded prompt from variable: prompt
+2025-11-17 22:46:19,275 - agent_toolkit - INFO - Loading document: solar.pdf, is_image=True
+2025-11-17 22:46:19,275 - agent_toolkit - INFO - Converting PDF to images: solar.pdf
+2025-11-17 22:46:19,325 - agent_toolkit - WARNING - pdf2image failed: Unable to get page count. Is poppler installed and in PATH?, trying PyMuPDF fallback
+2025-11-17 22:46:19,533 - agent_toolkit - INFO - Saved image: solar\solar_page_1.png
+2025-11-17 22:46:19,729 - agent_toolkit - INFO - Saved image: solar\solar_page_2.png
+2025-11-17 22:46:19,919 - agent_toolkit - INFO - Saved image: solar\solar_page_3.png
+2025-11-17 22:46:20,197 - agent_toolkit - INFO - Saved image: solar\solar_page_4.png
+2025-11-17 22:46:20,411 - agent_toolkit - INFO - Saved image: solar\solar_page_5.png
+2025-11-17 22:46:20,600 - agent_toolkit - INFO - Saved image: solar\solar_page_6.png
+2025-11-17 22:46:20,789 - agent_toolkit - INFO - Saved image: solar\solar_page_7.png
+2025-11-17 22:46:20,789 - agent_toolkit - INFO - SUCCESS: Converted 7 pages to images using PyMuPDF
+2025-11-17 22:46:20,789 - agent_toolkit - INFO - Building agent: model=gpt5-mini, is_image=True
+2025-11-17 22:46:20,789 - agent_toolkit - INFO - Calling image LLM: gpt5-mini
+2025-11-17 22:46:20,789 - agent_toolkit - INFO - Calling LLM (image): gpt5-mini, image: solar\solar_page_1.png
+2025-11-17 22:46:24,544 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:46:24,559 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:46:24,559 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:46:24,560 - agent_toolkit - INFO - SUCCESS: LLM response cleaned and validated
+2025-11-17 22:46:24,560 - agent_toolkit - INFO - Running LLM judgment
+2025-11-17 22:46:24,560 - agent_toolkit - INFO - Starting LLM judgment with 1 judges
+2025-11-17 22:46:24,560 - agent_toolkit - INFO - Judge gpt-4o evaluating response
+2025-11-17 22:46:24,560 - agent_toolkit - INFO - Calling LLM (text): gpt-4o
+2025-11-17 22:46:26,659 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:46:26,664 - agent_toolkit - INFO - Judge gpt-4o: score=1.0, found=True
+2025-11-17 22:46:26,664 - agent_toolkit - INFO - SUCCESS: All 1 extracted items have valid values
+2025-11-17 22:46:26,664 - agent_toolkit - INFO - SUCCESS: Judgment complete. Overall score: 1.0, Found (judge): True, Found (programmatic): True, Found (final): True
+2025-11-17 22:46:26,664 - agent_toolkit - INFO - SUCCESS: Agent builder completed
+2025-11-17 22:46:26,664 - agent_toolkit - INFO - Building agent: model=gpt5-mini, is_image=True
+2025-11-17 22:46:26,664 - agent_toolkit - INFO - Calling image LLM: gpt5-mini
+2025-11-17 22:46:26,664 - agent_toolkit - INFO - Calling LLM (image): gpt5-mini, image: solar\solar_page_1.png
+2025-11-17 22:46:29,985 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:46:29,985 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:46:29,985 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:46:29,985 - agent_toolkit - WARNING - Missing key in response: extracted.DC_side.source
+2025-11-17 22:46:29,985 - agent_toolkit - WARNING - Missing key in response: extracted.AC_side.source
+2025-11-17 22:46:29,985 - agent_toolkit - WARNING - Missing key in response: extracted.HT_side.source
+2025-11-17 22:46:29,985 - agent_toolkit - WARNING - Missing key in response: extracted.quantities.source
+2025-11-17 22:46:29,985 - agent_toolkit - INFO - SUCCESS: LLM response cleaned and validated
+2025-11-17 22:46:29,985 - agent_toolkit - INFO - Running LLM judgment
+2025-11-17 22:46:29,985 - agent_toolkit - INFO - Starting LLM judgment with 1 judges
+2025-11-17 22:46:29,985 - agent_toolkit - INFO - Judge gpt-4o evaluating response
+2025-11-17 22:46:29,985 - agent_toolkit - INFO - Calling LLM (text): gpt-4o
+2025-11-17 22:46:32,007 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:46:32,007 - agent_toolkit - INFO - Judge gpt-4o: score=0.5, found=False
+2025-11-17 22:46:32,007 - agent_toolkit - WARNING - Invalid extracted values: ["DC_side: invalid value 'not found'", "AC_side: invalid value 'not found'", "HT_side: invalid value 'not found'", "quantities: invalid value 'not found'"]
+2025-11-17 22:46:32,007 - agent_toolkit - INFO - SUCCESS: Judgment complete. Overall score: 0.5, Found (judge): False, Found (programmatic): False, Found (final): False
+2025-11-17 22:46:32,007 - agent_toolkit - INFO - SUCCESS: Agent builder completed
+2025-11-17 22:46:32,021 - agent_toolkit - INFO - Building agent: model=gpt5-mini, is_image=True
+2025-11-17 22:46:32,022 - agent_toolkit - INFO - Calling image LLM: gpt5-mini
+2025-11-17 22:46:32,022 - agent_toolkit - INFO - Calling LLM (image): gpt5-mini, image: solar\solar_page_2.png
+2025-11-17 22:46:36,464 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:46:36,464 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:46:36,464 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:46:36,464 - agent_toolkit - WARNING - Missing key in response: extracted.DC_side.source
+2025-11-17 22:46:36,464 - agent_toolkit - WARNING - Missing key in response: extracted.HT_side.source
+2025-11-17 22:46:36,464 - agent_toolkit - WARNING - Missing key in response: extracted.quantities.source
+2025-11-17 22:46:36,464 - agent_toolkit - INFO - SUCCESS: LLM response cleaned and validated
+2025-11-17 22:46:36,464 - agent_toolkit - INFO - Running LLM judgment
+2025-11-17 22:46:36,464 - agent_toolkit - INFO - Starting LLM judgment with 1 judges
+2025-11-17 22:46:36,464 - agent_toolkit - INFO - Judge gpt-4o evaluating response
+2025-11-17 22:46:36,464 - agent_toolkit - INFO - Calling LLM (text): gpt-4o
+2025-11-17 22:46:38,110 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:46:38,110 - agent_toolkit - INFO - Judge gpt-4o: score=0.5, found=False
+2025-11-17 22:46:38,110 - agent_toolkit - WARNING - Invalid extracted values: ["DC_side: invalid value 'not found'", "HT_side: invalid value 'not found'", "quantities: invalid value 'not found'"]
+2025-11-17 22:46:38,125 - agent_toolkit - INFO - SUCCESS: Judgment complete. Overall score: 0.5, Found (judge): False, Found (programmatic): False, Found (final): False
+2025-11-17 22:46:38,125 - agent_toolkit - INFO - SUCCESS: Agent builder completed
+2025-11-17 22:46:38,125 - agent_toolkit - INFO - Building agent: model=gpt5-mini, is_image=True
+2025-11-17 22:46:38,125 - agent_toolkit - INFO - Calling image LLM: gpt5-mini
+2025-11-17 22:46:38,125 - agent_toolkit - INFO - Calling LLM (image): gpt5-mini, image: solar\solar_page_3.png
+2025-11-17 22:46:54,020 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:46:54,020 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:46:54,020 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:46:54,020 - agent_toolkit - WARNING - Missing key in response: extracted.DC_side.source
+2025-11-17 22:46:54,020 - agent_toolkit - WARNING - Missing key in response: extracted.AC_side.source
+2025-11-17 22:46:54,020 - agent_toolkit - WARNING - Missing key in response: extracted.HT_side.source
+2025-11-17 22:46:54,020 - agent_toolkit - WARNING - Missing key in response: extracted.quantities.source
+2025-11-17 22:46:54,020 - agent_toolkit - INFO - SUCCESS: LLM response cleaned and validated
+2025-11-17 22:46:54,024 - agent_toolkit - INFO - Running LLM judgment
+2025-11-17 22:46:54,024 - agent_toolkit - INFO - Starting LLM judgment with 1 judges
+2025-11-17 22:46:54,024 - agent_toolkit - INFO - Judge gpt-4o evaluating response
+2025-11-17 22:46:54,024 - agent_toolkit - INFO - Calling LLM (text): gpt-4o
+2025-11-17 22:46:55,595 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:46:55,595 - agent_toolkit - INFO - Judge gpt-4o: score=0.5, found=False
+2025-11-17 22:46:55,595 - agent_toolkit - WARNING - Invalid extracted values: ["DC_side: invalid value 'not found'", "AC_side: invalid value 'not found'", "HT_side: invalid value 'not found'", "quantities: invalid value 'not found'"]
+2025-11-17 22:46:55,595 - agent_toolkit - INFO - SUCCESS: Judgment complete. Overall score: 0.5, Found (judge): False, Found (programmatic): False, Found (final): False
+2025-11-17 22:46:55,595 - agent_toolkit - INFO - SUCCESS: Agent builder completed
+2025-11-17 22:46:55,595 - agent_toolkit - INFO - Building agent: model=gpt5-mini, is_image=True
+2025-11-17 22:46:55,595 - agent_toolkit - INFO - Calling image LLM: gpt5-mini
+2025-11-17 22:46:55,605 - agent_toolkit - INFO - Calling LLM (image): gpt5-mini, image: solar\solar_page_4.png
+2025-11-17 22:47:04,754 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:47:04,761 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:47:04,761 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:47:04,764 - agent_toolkit - WARNING - Missing key in response: extracted.DC_side.source
+2025-11-17 22:47:04,764 - agent_toolkit - WARNING - Missing key in response: extracted.AC_side.source
+2025-11-17 22:47:04,764 - agent_toolkit - WARNING - Missing key in response: extracted.HT_side.source
+2025-11-17 22:47:04,764 - agent_toolkit - WARNING - Missing key in response: extracted.quantities.source
+2025-11-17 22:47:04,764 - agent_toolkit - INFO - SUCCESS: LLM response cleaned and validated
+2025-11-17 22:47:04,764 - agent_toolkit - INFO - Running LLM judgment
+2025-11-17 22:47:04,764 - agent_toolkit - INFO - Starting LLM judgment with 1 judges
+2025-11-17 22:47:04,764 - agent_toolkit - INFO - Judge gpt-4o evaluating response
+2025-11-17 22:47:04,764 - agent_toolkit - INFO - Calling LLM (text): gpt-4o
+2025-11-17 22:47:06,164 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:47:06,164 - agent_toolkit - INFO - Judge gpt-4o: score=0.1, found=False
+2025-11-17 22:47:06,164 - agent_toolkit - WARNING - Invalid extracted values: ["DC_side: invalid value 'not found'", "AC_side: invalid value 'not found'", "HT_side: invalid value 'not found'", "quantities: invalid value 'not found'"]
+2025-11-17 22:47:06,164 - agent_toolkit - INFO - SUCCESS: Judgment complete. Overall score: 0.1, Found (judge): False, Found (programmatic): False, Found (final): False
+2025-11-17 22:47:06,164 - agent_toolkit - INFO - SUCCESS: Agent builder completed
+2025-11-17 22:47:06,164 - agent_toolkit - INFO - Building agent: model=gpt5-mini, is_image=True
+2025-11-17 22:47:06,164 - agent_toolkit - INFO - Calling image LLM: gpt5-mini
+2025-11-17 22:47:06,164 - agent_toolkit - INFO - Calling LLM (image): gpt5-mini, image: solar\solar_page_5.png
+2025-11-17 22:47:12,062 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:47:12,062 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:47:12,062 - agent_toolkit - INFO - Cleaning LLM response
+2025-11-17 22:47:12,062 - agent_toolkit - INFO - SUCCESS: LLM response cleaned and validated
+2025-11-17 22:47:12,062 - agent_toolkit - INFO - Running LLM judgment
+2025-11-17 22:47:12,062 - agent_toolkit - INFO - Starting LLM judgment with 1 judges
+2025-11-17 22:47:12,062 - agent_toolkit - INFO - Judge gpt-4o evaluating response
+2025-11-17 22:47:12,062 - agent_toolkit - INFO - Calling LLM (text): gpt-4o
+2025-11-17 22:47:14,067 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-17 22:47:14,086 - agent_toolkit - INFO - Judge gpt-4o: score=1.0, found=True
+2025-11-17 22:47:14,086 - agent_toolkit - INFO - SUCCESS: All 4 extracted items have valid values
+2025-11-17 22:47:14,086 - agent_toolkit - INFO - SUCCESS: Judgment complete. Overall score: 1.0, Found (judge): True, Found (programmatic): True, Found (final): True
+2025-11-17 22:47:14,087 - agent_toolkit - INFO - SUCCESS: Agent builder completed

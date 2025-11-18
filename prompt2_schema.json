@@ -1,0 +1,12 @@
+{
+  "domain": "domain name",
+  "extracted": {
+    "DC_side": {"value": "...", "source": "page X"},
+    "AC_side": {"value": "...", "source": "page X"},
+    "HT_side": {"value": "...", "source": "page X"},
+    "quantities": {"value": "...", "source": "page X"}
+  },
+  "confidence": "",
+  "confidence_keyword": "",
+  "summary": ""
+}
