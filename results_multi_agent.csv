@@ -1,6 +1,0 @@
-domain,value_type,value,source,confidence,agent
-Solar Plant Design,land_required,6 acre,page 1,1,land_and_layout
-cable,DC_side,10 mm²,page 5,1,cables
-cable,AC_side,LT: 16mm² & HT: 185mm²,page 5,1,cables
-cable,HT_side,185mm²,page 5,1,cables
-cable,quantities,As per Distance & Gap,page 5,1,cables

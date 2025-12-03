@@ -32,7 +32,7 @@ A comprehensive toolkit for processing documents (PDF, DOCX, TXT) using multiple
 pip install openai PyPDF2 python-docx pdf2image pandas pillow anthropic google-generativeai PyMuPDF
 ```
 
-### Optional: Poppler for pdf2image
+### Optional: Poppler for pdf2image (deprecated)
 
 If using `pdf2image`, install Poppler:
 - **Windows**: Download from [poppler-windows releases](https://github.com/oschwartz10612/poppler-windows/releases) and add to PATH

@@ -1,0 +1,29 @@
+# Core LLM Libraries
+openai>=1.0.0
+#anthropic>=0.18.0
+#google-generativeai>=0.3.0
+
+# Document Processing
+PyPDF2>=3.0.0
+python-docx>=1.1.0
+pdf2image>=1.16.0
+PyMuPDF>=1.23.0
+
+# Data Processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Image Processing
+Pillow>=10.0.0
+
+# Testing and Evaluation (TEVV)
+scikit-learn>=1.3.0  # For TF-IDF cosine similarity
+# nltk>=3.8.0  # Optional: for advanced text processing (uncomment if needed)
+
+# Web Framework
+Flask>=2.3.0
+flask-cors>=4.0.0
+
+# Standard library dependencies (usually included, but listed for completeness)
+# json, logging, re, pathlib, typing, concurrent.futures - all built-in
+
